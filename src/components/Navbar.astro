@@ -1,0 +1,31 @@
+---
+import AccountIcon from "../assets/AccountIcon.astro";
+import SupportIcon from "../assets/SupportIcon.astro";
+import Teslalogo from "../assets/Teslalogo.astro";
+import WorldIcon from "../assets/WorldIcon.astro";
+---
+
+<header class="px-7 py-3.5 flex items-center fixed top-0 w-full justify-between z-30">
+  <div class="pl-5">
+    <Teslalogo />
+    <span class="hidden">Tesla</span>
+  </div>
+
+  <nav>
+    <ul class="flex [&>li>a]:inline-block [&>li>a]:text-sm [&>li>a]:font-medium [&>li>a]:px-4 [&>li>a]:py-1">
+      <li><a href="#">Vehicles</a></li>
+      <li><a href="#">Energy</a></li>
+      <li><a href="#">Charging</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">Shop</a></li>
+    </ul>
+  </nav>
+
+  <nav>
+    <ul class="flex gap-1 pr-[5px]">
+      <li><SupportIcon /></li>
+      <li><WorldIcon /></li>
+      <li><AccountIcon /></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  url: string;
+  model: string;
+}
+const { url, model } = Astro.props;
+---
+
+<section
+  class="bg-black h-screen w-screen text-center relative overflow-hidden"
+>
+  <div class="bg-cover">
+    <img src={url} alt={model} class="bg-cover"/>
+  </div>
+</section>
