@@ -1,0 +1,12 @@
+---
+const { urlButton, text } = Astro.props;
+const { class: additionalClasses = "" } = Astro.props;
+const { classSpan: additionalClassesSpan = "" } = Astro.props;
+---
+
+<a
+  href={urlButton}
+  class={`bg-gray-100 text-sm  py-[10px] px-[98px] rounded text-light-grey font-semibold ${additionalClasses}`}
+>
+  {text}
+</a>

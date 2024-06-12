@@ -1,0 +1,13 @@
+---
+interface Props {
+  span: string;
+  title: string;
+  text: string;
+  classH1: string;
+}
+const { span, title, text, classH1 } = Astro.props;
+---
+
+<h1 class={classH1}>{title}</h1>
+<span>{span}</span>
+<p>{text}</p>

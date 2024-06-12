@@ -1,0 +1,17 @@
+---
+interface Props {
+  urlHeader: string;
+  title: string;
+  text: string;
+  contentLink: string;
+  classH1: string;
+  classA: string;
+  classP: string;
+}
+const { urlHeader, title, text, contentLink, classH1, classA, classP } =
+  Astro.props;
+---
+
+<h1 class={classH1}>{title}</h1>
+<a class={classA} href={urlHeader}>{contentLink}</a>
+<p class={classP}>{text}</p>
