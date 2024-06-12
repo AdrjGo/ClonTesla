@@ -10,12 +10,12 @@ const { url, model } = Astro.props;
   class="flex bg-white h-screen w-full text-center relative overflow-hidden"
 >
   <div class="z-30 relative flex flex-col h-full w-full">
-    <header class="pt-[88px]">
+    <header class="flex flex-col flex-grow justify-start pt-[88px]">
       <slot />
     </header>
     <footer class="flex flex-col flex-grow justify-end pb-[110px]">
-      <div class="flex flex-wrap gap-6">
-        <section class="w-full">
+      <div class="flex flex-wrap justify-center">
+        <section class="flex flex-row grid-rows-1 justify-center gap-6">
           <slot name="link-button" />
         </section>
       </div>

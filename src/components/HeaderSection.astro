@@ -1,13 +1,10 @@
 ---
-interface Props {
-  span: string;
-  title: string;
-  text: string;
-  classH1: string;
-}
-const { span, title, text, classH1 } = Astro.props;
+const { span, title, text } = Astro.props;
+const { classH1: additionalClasses = "" } = Astro.props;
+const { classSpan: additionalClassesSpan = "" } = Astro.props;
+const { classP: additionalClassesP = "" } = Astro.props;
 ---
 
-<h1 class={classH1}>{title}</h1>
+<h1 class={`text-[40px] font-semibold ${additionalClasses}`}>{title}</h1>
 <span>{span}</span>
 <p>{text}</p>

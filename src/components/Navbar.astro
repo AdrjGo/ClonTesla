@@ -5,7 +5,7 @@ import Teslalogo from "../assets/Teslalogo.astro";
 import WorldIcon from "../assets/WorldIcon.astro";
 ---
 
-<header class="px-7 py-3.5 flex items-center fixed top-0 w-full justify-between z-30">
+<header class="px-7 py-3.5 flex items-center absolute top-0 w-full justify-between z-40 ">
   <div class="pl-5">
     <Teslalogo />
     <span class="hidden">Tesla</span>
@@ -21,8 +21,8 @@ import WorldIcon from "../assets/WorldIcon.astro";
     </ul>
   </nav>
 
-  <nav>
-    <ul class="flex gap-1 pr-[5px]">
+  <nav class="pr-5">
+    <ul class="flex gap-1">
       <li><SupportIcon /></li>
       <li><WorldIcon /></li>
       <li><AccountIcon /></li>
