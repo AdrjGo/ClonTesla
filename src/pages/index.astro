@@ -3,6 +3,7 @@ import ContentSection from "../components/ContentSection.astro";
 import HeaderSection from "../components/HeaderSection.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Layout from "../layouts/Layout.astro";
+import CybertruckTitle from "../assets/CybertruckTitle.astro";
 ---
 
 <Layout title="Electric Cars, Solar & Clean Energy | Tesla">
@@ -91,17 +92,15 @@ import Layout from "../layouts/Layout.astro";
       />
     </ContentSection>
 
-    <!-- CIBERTRUCKK -->
+    <!-- CYBERTRUCKK -->
     <ContentSection
-      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
-      model="Model Y"
+      url="../../public/img/Homepage-Cybertruck-Desktop.avif"
+      model="Cybertruck"
     >
-      <HeaderSection
-        title="Model Y"
-        urlHeader="#"
-        contentLink="From $31,490"
-        text="After Est. Savings"
-      />
+      <HeaderSection>
+        <CybertruckTitle slot="titleImage" />
+      </HeaderSection>
+
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"

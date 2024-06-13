@@ -9,13 +9,14 @@ export default {
         "Universal-Sans-Text-Bold",
         "Universal-Sans-Text-Medium",
         "Universal-Sans-Text-Regular",
-        "sans-serif" // Fuente de respaldo
+        "sans-serif", // Fuente de respaldo
       ],
     },
     extend: {
       colors: {
         "light-grey": "#393C41",
         "dark-grey": "#171A20",
+        "light-white": "#EEEEEE",
       },
       fontFamily: {
         "display-regular": ["Universal-Sans-Display-Regular", "sans-serif"],

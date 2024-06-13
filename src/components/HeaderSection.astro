@@ -1,12 +1,12 @@
 ---
 interface Props {
   urlHeader?: string;
-  title: string;
-  text: string;
+  title?: string;
+  text?: string;
   contentLink?;
   underline?: string;
   class?: string;
-  ligthColor?: string;
+  ligthColor?;
 }
 const {
   urlHeader,
@@ -19,23 +19,40 @@ const {
 const { class: additionalClasses = "" } = Astro.props;
 ---
 
-<div
+<h1
   class:list={[
+    `text-[40px] leading-none font-display-medium`,
     {
-      "[$>h1]:text-white": ligthColor,
+      "text-white": ligthColor,
+      "text-dark-grey": !ligthColor,
     },
   ]}
 >
-  <h1 class="text-[40px] leading-none font-display-medium">{title}</h1>
-  <a
-    href={urlHeader}
-    class:list={[
-      `font-display-regular leading-relaxed ${additionalClasses}`,
-      {
-        "underline underline-offset-8 decoration-1 text-[28px]": underline,
-        "text-2xl": !underline,
-      },
-    ]}>{contentLink}</a
-  >
-  <p class="text-sm text-light-grey leading-tight font-text-regular">{text}</p>
-</div>
+  <slot name="titleImage" />
+  {title}
+</h1>
+<a
+  href={urlHeader}
+  class:list={[
+    `font-display-regular leading-relaxed ${additionalClasses}`,
+    {
+      "underline underline-offset-8 decoration-1 text-[28px]": underline,
+      "text-2xl": !underline,
+    },
+    {
+      "text-white": ligthColor,
+      "text-dark-grey": !ligthColor,
+    },
+  ]}>{contentLink}</a
+>
+<p
+  class:list={[
+    `text-sm leading-tight font-text-regular`,
+    {
+      "text-light-white": ligthColor,
+      "text-light-grey": !ligthColor,
+    },
+  ]}
+>
+  {text}
+</p>
