@@ -5,14 +5,18 @@ import Teslalogo from "../assets/Teslalogo.astro";
 import WorldIcon from "../assets/WorldIcon.astro";
 ---
 
-<header class="px-7 py-3.5 flex items-center absolute top-0 w-full justify-between z-40 ">
-  <div class="pl-5">
+<header
+  class="absolute top-0 z-30 h-14 flex items-center w-full justify-between"
+>
+  <h1 class="flex flex-grow-0 pl-8 w-[33.33%]">
     <Teslalogo />
     <span class="hidden">Tesla</span>
-  </div>
+  </h1>
 
-  <nav>
-    <ul class="flex [&>li>a]:inline-block [&>li>a]:text-sm [&>li>a]:font-medium [&>li>a]:px-4 [&>li>a]:py-1">
+  <nav class="w-[33.33%]">
+    <ul
+      class="flex flex-grow-1 [&>li>a]:inline-block [&>li>a]:text-sm [&>li>a]:px-4 [&>li>a]:py-1 [&>li>a]:tracking-[0.5px] justify-center font-display-bold"
+    >
       <li><a href="#">Vehicles</a></li>
       <li><a href="#">Energy</a></li>
       <li><a href="#">Charging</a></li>
@@ -21,11 +25,11 @@ import WorldIcon from "../assets/WorldIcon.astro";
     </ul>
   </nav>
 
-  <nav class="pr-5">
-    <ul class="flex gap-1">
+  <nav class="w-[33.33%] flex justify-end">
+    <ul class="flex gap-1 flex-grow-2 pr-8">
       <li><SupportIcon /></li>
       <li><WorldIcon /></li>
-      <li><AccountIcon /></li>
+      <li class="mr-4"><AccountIcon /></li>
     </ul>
   </nav>
 </header>

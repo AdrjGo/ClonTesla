@@ -1,11 +1,23 @@
 ---
+interface Props {
+  urlButton;
+  text: string;
+  class?: string;
+  active?;
+}
 const { urlButton, text } = Astro.props;
-const { class: additionalClasses = "" } = Astro.props;
+const { class: additionalClasses = "", active = false } = Astro.props;
 ---
 
 <a
   href={urlButton}
-  class={` text-sm  w-[264px] h-[40px] rounded  font-semibold grid items-center ${additionalClasses}`}
+  class:list={[
+    `text-sm w-[264px] h-[40px] rounded grid items-center font-text-medium ${additionalClasses}`,
+    {
+      "bg-dark-grey text-white": active,
+      "bg-white text-light-grey": !active,
+    },
+  ]}
 >
   {text}
 </a>

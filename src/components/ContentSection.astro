@@ -9,8 +9,10 @@ const { url, model } = Astro.props;
 <section
   class="flex bg-white h-screen w-full text-center relative overflow-hidden"
 >
-  <div class="z-30 relative flex flex-col h-full w-full">
-    <header class="flex flex-col flex-grow justify-start pt-[88px]">
+  <div class="z-30 flex flex-col h-full w-full">
+    <header
+      class="flex flex-col flex-grow justify-start pt-[7%] leading-none tracking-tight"
+    >
       <slot />
     </header>
     <footer class="flex flex-col flex-grow justify-end pb-[110px]">

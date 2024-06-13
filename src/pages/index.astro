@@ -1,50 +1,193 @@
 ---
 import ContentSection from "../components/ContentSection.astro";
 import HeaderSection from "../components/HeaderSection.astro";
-import HeaderSectionLink from "../components/HeaderSectionLink.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Electric Cars, Solar & Clean Energy | Tesla">
   <main>
+    <!-- MODEL Y -->
     <ContentSection
       url="../../public/img/Homepage-Model-3-Desktop-LHD-v2.avif"
       model="Model 3"
     >
-      <HeaderSectionLink
+      <HeaderSection
         title="Model 3"
         urlHeader="#"
         contentLink="1.99% APR Financing"
-        text="From $216/mo1 Lease After Est. Gas Savings"
-        classH1=""
-        classA="underline underline-offset-8 decoration-1  text-2xl"
-        classP="text-sm text-light-grey"
+        underline="true"
+        text="From $216/mo Lease After Est. Gas Savings"
       />
 
-      <LinkButton
-        urlButton="#"
-        text="Order Now"
-        class="bg-white text-light-grey"
-        slot="link-button"
-      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
         text="Demo Drive"
-        class="text-white bg-dark-grey"
+        active="true"
         slot="link-button"
       />
     </ContentSection>
 
+    <!-- MODEL Y -->
     <ContentSection
       url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
       model="Model Y"
     >
       <HeaderSection
         title="Model Y"
-        span="From $31,4902"
+        urlHeader="#"
+        contentLink="From $31,490"
         text="After Est. Savings"
-        classH1="text-3xl"
+        class="text-2xl"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- MODEL X -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-X-Desktop-v2.avif"
+      model="Model X"
+    >
+      <HeaderSection
+        title="Model X"
+        urlHeader="#"
+        contentLink="From $63,990"
+        text="After Est. Savings"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- MODEL S -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-S-Desktop-v2.avif"
+      model="Model S"
+    >
+      <HeaderSection
+        title="Model S"
+        urlHeader="#"
+        contentLink="From $66,490"
+        text="After Est. Savings"
+        ligthColor="true"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- CIBERTRUCKK -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
+      model="Model Y"
+    >
+      <HeaderSection
+        title="Model Y"
+        urlHeader="#"
+        contentLink="From $31,490"
+        text="After Est. Savings"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- SOLAR PANELS -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
+      model="Model Y"
+    >
+      <HeaderSection
+        title="Model Y"
+        urlHeader="#"
+        contentLink="From $31,490"
+        text="After Est. Savings"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- SOLAR ROOF -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-X-Desktop-v2.avif"
+      model="Model X"
+    >
+      <HeaderSection
+        title="Model X"
+        urlHeader="#"
+        contentLink="From $31,490"
+        text="After Est. Savings"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- POWERWALL -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
+      model="Model Y"
+    >
+      <HeaderSection
+        title="Model Y"
+        urlHeader="#"
+        contentLink="From $31,490"
+        text="After Est. Savings"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
+      />
+    </ContentSection>
+
+    <!-- ACEESORIES -->
+    <ContentSection
+      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
+      model="Model Y"
+    >
+      <HeaderSection
+        title="Model Y"
+        urlHeader="#"
+        contentLink="From $31,490"
+        text="After Est. Savings"
+      />
+      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Demo Drive"
+        active="true"
+        slot="link-button"
       />
     </ContentSection>
   </main>
