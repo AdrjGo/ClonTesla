@@ -25,6 +25,9 @@ export default {
         "text-medium": ["Universal-Sans-Text-Medium", "sans-serif"],
         "text-regular": ["Universal-Sans-Text-Regular", "sans-serif"],
       },
+      transitionDuration: {
+        '400': "400ms",
+      },
     },
   },
   plugins: [],
