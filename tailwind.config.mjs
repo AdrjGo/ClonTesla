@@ -15,6 +15,7 @@ export default {
     extend: {
       colors: {
         "light-grey": "#393C41",
+        "medium-grey": "#222222",
         "dark-grey": "#171A20",
         "light-white": "#EEEEEE",
       },
@@ -26,7 +27,7 @@ export default {
         "text-regular": ["Universal-Sans-Text-Regular", "sans-serif"],
       },
       transitionDuration: {
-        '400': "400ms",
+        400: "400ms",
       },
     },
   },

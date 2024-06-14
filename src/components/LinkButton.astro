@@ -14,8 +14,8 @@ const { class: additionalClasses = "", active = false } = Astro.props;
   class:list={[
     `text-sm w-[264px] h-[40px] rounded grid items-center font-text-medium ${additionalClasses}`,
     {
-      "bg-dark-grey text-white": active,
-      "bg-white text-light-grey": !active,
+      "bg-dark-grey text-white hover:bg-light-grey hover:transition hover:duration-400": active,
+      "bg-[#F4F4F4] text-light-grey": !active,
     },
   ]}
 >

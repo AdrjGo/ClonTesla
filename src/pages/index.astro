@@ -4,11 +4,12 @@ import HeaderSection from "../components/HeaderSection.astro";
 import LinkButton from "../components/LinkButton.astro";
 import Layout from "../layouts/Layout.astro";
 import CybertruckTitle from "../assets/CybertruckTitle.astro";
+import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
 ---
 
 <Layout title="Electric Cars, Solar & Clean Energy | Tesla">
   <main>
-    <!-- MODEL Y -->
+    <!-- MODEL 3 -->
     <ContentSection
       url="../../public/img/Homepage-Model-3-Desktop-LHD-v2.avif"
       model="Model 3"
@@ -42,12 +43,18 @@ import CybertruckTitle from "../assets/CybertruckTitle.astro";
         text="After Est. Savings"
         class="text-2xl"
       />
-      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
+      <LinkButton
+        urlButton="#"
+        text="Order Now"
+        class="text-zinc-950 bg-[#FFFFFF]"
+        slot="link-button"
+      />
       <LinkButton
         urlButton="#"
         text="Demo Drive"
         active="true"
         slot="link-button"
+        class="bg-medium-grey"
       />
     </ContentSection>
 
@@ -101,10 +108,10 @@ import CybertruckTitle from "../assets/CybertruckTitle.astro";
         <CybertruckTitle slot="titleImage" />
       </HeaderSection>
 
-      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
-      <LinkButton
+      <LinkButtonCybertruck urlButton="#" text="ORDER NOW" slot="link-button" />
+      <LinkButtonCybertruck
         urlButton="#"
-        text="Demo Drive"
+        text="LEARN MORE"
         active="true"
         slot="link-button"
       />
@@ -112,19 +119,21 @@ import CybertruckTitle from "../assets/CybertruckTitle.astro";
 
     <!-- SOLAR PANELS -->
     <ContentSection
-      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
-      model="Model Y"
+      url="../../public/img/Homepage-SolarPanels-01-Desktop.avif"
+      model="Solar panels"
     >
       <HeaderSection
-        title="Model Y"
+        title="Solar Panels"
         urlHeader="#"
-        contentLink="From $31,490"
-        text="After Est. Savings"
+        contentLink="Schedule a Virtual Consultation"
+        ligthColor="true"
+        class="text-sm font-display-regular underline-offset-[2.5px] leading-[45px] tracking-[0.51px] text-[#EEEEEE]"
+        underline="true"
       />
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
-        text="Demo Drive"
+        text="Learn More"
         active="true"
         slot="link-button"
       />
@@ -132,19 +141,19 @@ import CybertruckTitle from "../assets/CybertruckTitle.astro";
 
     <!-- SOLAR ROOF -->
     <ContentSection
-      url="../../public/img/Homepage-Model-X-Desktop-v2.avif"
-      model="Model X"
+      url="../../public/img/Homepage-SolarRoof-Desktop-Global.avif"
+      model="Solar roof"
     >
       <HeaderSection
-        title="Model X"
+        title="Solar Roof"
         urlHeader="#"
-        contentLink="From $31,490"
-        text="After Est. Savings"
+        contentLink="Produce Clean Energy From Your Roof"
+        class="text-sm text-light-grey tracking-[0.0332rem] leading-[42px]"
       />
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
-        text="Demo Drive"
+        text="Learn More"
         active="true"
         slot="link-button"
       />
@@ -152,19 +161,17 @@ import CybertruckTitle from "../assets/CybertruckTitle.astro";
 
     <!-- POWERWALL -->
     <ContentSection
-      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
-      model="Model Y"
+      url="../../public/img/Homepage-Powerwall-01-Desktop.avif"
+      model="Powerwall"
+      class="gradient-custom"
     >
       <HeaderSection
-        title="Model Y"
-        urlHeader="#"
-        contentLink="From $31,490"
-        text="After Est. Savings"
+        title="Powerwall"
       />
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
-        text="Demo Drive"
+        text="Learn More"
         active="true"
         slot="link-button"
       />
@@ -172,22 +179,13 @@ import CybertruckTitle from "../assets/CybertruckTitle.astro";
 
     <!-- ACEESORIES -->
     <ContentSection
-      url="../../public/img/Homepage-Model-Y-Desktop-Global.avif"
-      model="Model Y"
+      url="../../public/img/Homepage-Accessories-Desktop-NA-APAC.avif"
+      model="Accessories"
     >
       <HeaderSection
-        title="Model Y"
-        urlHeader="#"
-        contentLink="From $31,490"
-        text="After Est. Savings"
+        title="Accessories"
       />
-      <LinkButton urlButton="#" text="Order Now" slot="link-button" />
-      <LinkButton
-        urlButton="#"
-        text="Demo Drive"
-        active="true"
-        slot="link-button"
-      />
+      <LinkButton urlButton="#" text="Shop Now" slot="link-button" class="mb-6"/>
     </ContentSection>
   </main>
 </Layout>
