@@ -12,7 +12,7 @@ const { class: additionalClasses = "", active = false } = Astro.props;
 <a
   href={urlButton}
   class:list={[
-    `text-[12px] w-[264px] grid items-center font-text-bold font-semibold bg-[#111111] text-[#A2A3A5] tracking-widest opacity-90 ${additionalClasses}`,
+    `text-[12px] w-[264px] grid items-center font-text-bold font-semibold bg-[#111111] text-[#A2A3A5] tracking-widest opacity-90 hover:bg-dark-grey hover:opacity-80 hover:duration-500 ${additionalClasses}`,
     {
       "border border-[#a2a3a54d] h-[44px]": active,
       "border-t-[3px] border-[#a2a3a5e6] h-[44px]": !active,

@@ -1,6 +1,6 @@
 ---
 interface Props {
-  link: string;
+  link?: string;
   text?: string;
   class?: string;
 }
@@ -8,6 +8,9 @@ const { link, text } = Astro.props;
 const { class: additionalClasses = "" } = Astro.props;
 ---
 
-<li class=`hover:bg-red-500 ${additionalClasses}`>
+<li
+  class=`hover:bg-[#0000000d] rounded py-0.5 relative cursor-pointer ${additionalClasses}`
+>
   <a href={link}>{text}<slot /></a>
+  <slot name="menu" />
 </li>

@@ -7,7 +7,7 @@ import ListAnchor from "../components/ListAnchor.astro";
 ---
 
 <header
-  class="absolute top-0 z-30 h-14 flex items-center w-full justify-between"
+  class="absolute top-0 z-10 h-14 flex items-center w-full justify-between"
 >
   <h1 class="flex flex-grow-0 pl-8 w-[33.33%]">
     <Teslalogo />
@@ -18,16 +18,16 @@ import ListAnchor from "../components/ListAnchor.astro";
     <ul
       class="flex flex-grow-1 justify-center font-display-bold [&>li>a]:inline-block [&>li>a]:text-sm [&>li>a]:px-4 [&>li>a]:py-1 [&>li>a]:tracking-[0.5px]"
     >
-      <ListAnchor link="#" text="Vehicles" />
-      <ListAnchor link="#" text="Energy" />
-      <ListAnchor link="#" text="Charging" />
-      <ListAnchor link="#" text="Discover" />
+      <ListAnchor text="Vehicles" />
+      <ListAnchor text="Energy" />
+      <ListAnchor text="Charging" />
+      <ListAnchor text="Discover" />
       <ListAnchor link="#" text="Shop" />
     </ul>
   </nav>
 
   <nav class="w-[33.33%] flex justify-end">
-    <ul class="flex gap-1 flex-grow-2 pr-8">
+    <ul class="flex gap-1 flex-grow-2 pr-8 [&>li]:py-1">
       <ListAnchor link="#">
         <SupportIcon />
       </ListAnchor>
@@ -37,10 +37,6 @@ import ListAnchor from "../components/ListAnchor.astro";
       <ListAnchor link="#">
         <AccountIcon />
       </ListAnchor>
-
-      <!-- <li><SupportIcon /></li>
-      <li><WorldIcon /></li>
-      <li class="mr-4"><AccountIcon /></li> -->
     </ul>
   </nav>
 </header>
