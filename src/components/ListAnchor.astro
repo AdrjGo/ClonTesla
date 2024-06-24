@@ -1,0 +1,13 @@
+---
+interface Props {
+  link: string;
+  text?: string;
+  class?: string;
+}
+const { link, text } = Astro.props;
+const { class: additionalClasses = "" } = Astro.props;
+---
+
+<li class=`hover:bg-red-500 ${additionalClasses}`>
+  <a href={link}>{text}<slot /></a>
+</li>
