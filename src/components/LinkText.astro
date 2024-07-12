@@ -1,0 +1,34 @@
+---
+interface Props {
+  urlHeader?: string;
+  contentLink?;
+  underline?: string;
+  class?: string;
+  ligthColor?;
+  blackColor?;
+  hover?;
+}
+const {
+  urlHeader,
+  contentLink,
+  underline = false,
+  ligthColor = false,
+  blackColor = false,
+  hover = false,
+} = Astro.props;
+const { class: additionalClasses = "" } = Astro.props;
+---
+
+<a
+  href={urlHeader}
+  class:list={[
+    `font-text-medium leading-relaxed text-2xl ${additionalClasses}`,
+    {
+      "underline underline-offset-8 decoration-1": underline,
+      "hover:text-black duration-500": hover,
+      "text-white": ligthColor,
+      "text-light-grey": !ligthColor,
+      "text-black": blackColor,
+    },
+  ]}>{contentLink}</a
+>

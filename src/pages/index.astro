@@ -5,6 +5,8 @@ import LinkButton from "../components/LinkButton.astro";
 import Layout from "../layouts/Layout.astro";
 import CybertruckTitle from "../assets/CybertruckTitle.astro";
 import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
+import Paragraph from "../components/Paragraph.astro";
+import LinkText from "../components/LinkText.astro";
 ---
 
 <Layout title="Clone | Electric Cars, Solar & Clean Energy | Tesla">
@@ -14,11 +16,13 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Desktop-LHD-v2.jpg"
       model="Model 3"
     >
-      <HeaderSection
-        title="Model 3"
-        urlHeader="#"
-        contentLink="Long Range AWD From $34,990"
-        text="After Est. Savings"
+      <HeaderSection title="Model 3" />
+      <Paragraph text="$7,500 Federal Tax Credit Available" />
+      <LinkText
+        contentLink="From $29,990 After Est. Savings"
+        underline="true"
+        urlHeader="https://www.tesla.com/model3/design?redirect=no&cfg=#overview"
+        hover="true"
       />
 
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
@@ -35,13 +39,15 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-Global.png"
       model="Model Y"
     >
-      <HeaderSection
-        title="Model Y"
-        urlHeader="#"
-        contentLink="From $31,490"
-        text="After Est. Savings"
-        class="text-2xl"
+      <HeaderSection title="Model Y" />
+      <Paragraph text="From $31,490" />
+      <LinkText
+        contentLink="After $13,500 Est. Savings"
+        underline="true"
+        urlHeader="https://www.tesla.com/modely/design?financeModalTab=finance_options&financeProduct=cash#overview"
+        hover="true"
       />
+
       <LinkButton
         urlButton="#"
         text="Order Now"
@@ -62,12 +68,10 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-X-Desktop-v2.jpg"
       model="Model X"
     >
-      <HeaderSection
-        title="Model X"
-        urlHeader="#"
-        contentLink="From $63,990"
-        text="After Est. Savings"
-      />
+      <HeaderSection title="Model X" />
+      <Paragraph text="From $63,990"/>
+      <Paragraph text="After Est. Savings"/>
+
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
@@ -82,13 +86,10 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-v2.jpg"
       model="Model S"
     >
-      <HeaderSection
-        title="Model S"
-        urlHeader="#"
-        contentLink="From $66,490"
-        text="After Est. Savings"
-        ligthColor="true"
-      />
+      <HeaderSection title="Model S" ligthColor="true"/>
+      <Paragraph text="From $66,490" ligthColor="true"/>
+      <Paragraph text="After Est. Savings" ligthColor="true"/>
+
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
@@ -121,14 +122,9 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-SolarPanels-01-Desktop"
       model="Solar panels"
     >
-      <HeaderSection
-        title="Solar Panels"
-        urlHeader="#"
-        contentLink="Schedule a Virtual Consultation"
-        ligthColor="true"
-        class="text-sm font-display-regular underline-offset-[2.5px] leading-[45px] tracking-[0.51px] text-[#EEEEEE]"
-        underline="true"
-      />
+      <HeaderSection title="Solar Panels" ligthColor="true"/>
+      <LinkText contentLink="Schedule a Virtual Consultation" underline="true" ligthColor="true" urlHeader="https://www.tesla.com/event/schedule-virtual-energy-consultations"/>
+
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
@@ -143,12 +139,9 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Homepage-SolarRoof-Desktop-Global"
       model="Solar roof"
     >
-      <HeaderSection
-        title="Solar Roof"
-        urlHeader="#"
-        contentLink="Produce Clean Energy From Your Roof"
-        class="text-sm text-light-grey tracking-[0.0332rem] leading-[42px]"
-      />
+      <HeaderSection title="Solar Roof" />
+      <Paragraph text="Produce Clean Energy From Your Roof"/>
+
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
@@ -164,9 +157,7 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       model="Powerwall"
       class="gradient-custom"
     >
-      <HeaderSection
-        title="Powerwall"
-      />
+      <HeaderSection title="Powerwall" />
       <LinkButton urlButton="#" text="Order Now" slot="link-button" />
       <LinkButton
         urlButton="#"
@@ -181,10 +172,13 @@ import LinkButtonCybertruck from "../components/LinkButtonCybertruck.astro";
       url="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Accessories-Desktop-NA-APAC.jpg"
       model="Accessories"
     >
-      <HeaderSection
-        title="Accessories"
+      <HeaderSection title="Accessories" />
+      <LinkButton
+        urlButton="#"
+        text="Shop Now"
+        slot="link-button"
+        class="mb-6"
       />
-      <LinkButton urlButton="#" text="Shop Now" slot="link-button" class="mb-6"/>
     </ContentSection>
   </main>
 </Layout>
