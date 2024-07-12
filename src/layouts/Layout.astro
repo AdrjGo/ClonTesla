@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 
+import Footer from "./Footer.astro";
 import Navbar from "./Navbar.astro";
 ---
 
@@ -21,6 +22,7 @@ import Navbar from "./Navbar.astro";
   <body>
     <slot />
     <Navbar />
+    <Footer />
   </body>
 </html>
 <style is:global>
