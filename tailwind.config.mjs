@@ -18,6 +18,7 @@ export default {
         "medium-grey": "#222222",
         "dark-grey": "#171A20",
         "light-white": "#EEEEEE",
+        "menu-grey": "#5E5C62",
       },
       fontFamily: {
         "display-regular": ["Universal-Sans-Display-Regular", "sans-serif"],
@@ -28,6 +29,19 @@ export default {
       },
       transitionDuration: {
         400: "400ms",
+      },
+      gridTemplateColumns: {
+        "auto-repeat": "repeat(12, 1fr)",
+      },
+      screens: {
+        small: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        medium: "1200px",
+        // => @media (min-width: 1024px) { ... }
+
+        large: "1440px",
+        // => @media (min-width: 1200px) { ... }
       },
     },
   },

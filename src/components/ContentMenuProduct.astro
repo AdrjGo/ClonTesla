@@ -1,0 +1,23 @@
+---
+interface Props {
+  urlImage?;
+  model: string;
+  learnText?: string;
+  learnLink?: string;
+  OrderText?: string;
+  OrderLink?: string;
+}
+const { urlImage, model, learnLink, learnText, OrderLink, OrderText } =
+  Astro.props;
+---
+
+<div
+  class="text-center [&>div>a]:text-menu-grey [&>div>a]:text-sm [&>div>a]:font-text-regular [&>div>a]:underline justify-self-center"
+>
+  <img src={urlImage} alt={model} class="w-[97%] max-w-[220px] h-auto" />
+  <h3 class="pt-2 font-text-medium text-base">{model}</h3>
+  <div class="flex gap-3 justify-center pt-2">
+    <a href={learnLink}>{learnText}</a>
+    <a href={OrderLink}>{OrderText}</a>
+  </div>
+</div>

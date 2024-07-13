@@ -1,10 +1,59 @@
-<div class="bg-white w-full h-[50vh] absolute z-40 block" title="menu">
-  <ul>
-    <li><a href="">a</a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
+---
+import ContentMenuProduct from "./ContentMenuProduct.astro";
+
+interface Props {
+  mediumGrid?;
+  largeGrid?;
+  smallGrid?;
+  centerGrid?;
+}
+const {
+  mediumGrid = false,
+  smallGrid = false,
+  largeGrid = false,
+  centerGrid = false,
+} = Astro.props;
+---
+
+<div
+  class="bg-white grid grid-cols-auto-repeat px-7 pt-[120px] pb-14 invisible group-hover/item:visible absolute left-0 right-0 top-0 z-[-1] cursor-default "
+>
+  <section
+    class:list={[
+      "grid gap-4 medium:grid-cols-3",
+      {
+        "large:grid-cols-4 col-start-2 col-end-9": largeGrid,
+        "large:grid-cols-3 col-start-3 col-end-8": mediumGrid,
+        "large:grid-cols-3 col-start-4 col-end-10": smallGrid,
+        "large:grid-cols-4 medium:grid-cols-4 col-start-3 col-end-11":
+          centerGrid,
+      },
+    ]}
+  >
+    <slot />
+  </section>
+
+  <div
+    class:list={[
+      "w-[1px]  h-full bg-[#e2e3e3] justify-self-center",
+      {
+        "col-start-9 col-end-10": largeGrid,
+        "col-start-8 col-end-9": mediumGrid,
+      },
+    ]}
+  >
+  </div>
+
+  <section
+    class:list={[
+      "[&>ul>li]:mb-2 [&>ul>li>a]:text-sm [&>ul>li>a]:font-text-medium col-start-10 col-end-12 py-2",
+      {
+        "col-start-9 col-end-10": mediumGrid,
+      },
+    ]}
+  >
+    <ul>
+      <slot name="ListHoverMenu" />
+    </ul>
+  </section>
 </div>

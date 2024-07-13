@@ -2,14 +2,20 @@
 interface Props {
   text?: string;
   class?: string;
+  hover?;
 }
-const { text } = Astro.props;
+const { text, hover = false } = Astro.props;
 const { class: additionalClasses = "" } = Astro.props;
 ---
 
 <li
-  class=`hover:bg-[#0000000d] rounded py-0.5 relative cursor-pointer ${additionalClasses}`
+  class:list={[
+    `hover:bg-[#0000000d] rounded py-0.5 cursor-pointer group/item ${additionalClasses}`,
+    {
+      "hover:text-[#424449] hover:bg-transparent hover:underline hover:decoration-2 hover:underline-offset-3": hover,
+    },
+  ]}
 >
-  <a>{text}<slot /></a>
-  <slot name="menu" />
+  {text}
+  <slot />
 </li>
