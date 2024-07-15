@@ -3,270 +3,272 @@ import AccountIcon from "../assets/AccountIcon.astro";
 import SupportIcon from "../assets/SupportIcon.astro";
 import Teslalogo from "../assets/Teslalogo.astro";
 import WorldIcon from "../assets/WorldIcon.astro";
+import ButtonMenuResponsive from "../components/ButtonMenuResponsive.astro";
 import ContentHoverMenu from "../components/ContentHoverMenu.astro";
 import ContentMenuList from "../components/ContentMenuList.astro";
 import ContentMenuProduct from "../components/ContentMenuProduct.astro";
 import ListAnchor from "../components/ListAnchor.astro";
-
 ---
 
 <header class="absolute top-0 h-14 w-full">
-  <div class="relative w-full z-40 flex [&>nav]:h-14 [&>nav]:items-center [&>nav]:flex">
-
-      <h1 class="flex flex-grow-0 pl-8 w-[33.33%] items-center">
-        <Teslalogo />
-        <span class="hidden">Tesla</span>
-      </h1>
-
-      <nav class="w-[33.33%] group flex justify-center">
-        <ul
-          class="font-display-bold [&>li]:inline-block [&>li]:text-sm [&>li]:px-4 [&>li]:py-1 [&>li]:tracking-[0.5px]"
-        >
-          <ListAnchor text="Vehicles">
-            <ContentHoverMenu largeGrid="true">
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-S.png"
-                model="Model S"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-3-Performance-LHD.png"
-                model="Model 3"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-X.png"
-                model="Model X"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-Y.png"
-                model="Model Y"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Cybertruck-1x.png"
-                model="Cybertruck"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-HMC-RedBlue-LHD.png"
-                model="Help Me Choose"
-                learnText="Get Started"
-                learnLink="https://www.google.com/"
-              />
-
-              <ListAnchor text="Inventory" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Used Cars" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Demo Drive" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Trade-in" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Compare" hover="true" slot="ListHoverMenu" />
-              <ListAnchor
-                text="Help Me Charge"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor text="Fleet" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Semi" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Roadster" hover="true" slot="ListHoverMenu" />
-            </ContentHoverMenu>
-          </ListAnchor>
-
-          <ListAnchor text="Energy">
-            <ContentHoverMenu largeGrid="true">
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Panels.png"
-                model="Solar Panel"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Roof.png"
-                model="Solar Roof"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Powerwall-US.png"
-                model="Powerwall"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Megapack.png"
-                model="Megapack"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-              />
-
-              <ListAnchor
-                text="Schedule a Consultation"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor text="Why Solar" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Incentives" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Suport" hover="true" slot="ListHoverMenu" />
-              <ListAnchor
-                text="Partner whit Tesla"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor text="Commercial" hover="true" slot="ListHoverMenu" />
-              <ListAnchor text="Utilities" hover="true" slot="ListHoverMenu" />
-            </ContentHoverMenu>
-          </ListAnchor>
-
-          <ListAnchor text="Charging">
-            <ContentHoverMenu mediumGrid="true">
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Charging-Charging.png"
-                model="Solar Panel"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Order"
-                OrderLink="https://www.google.com/"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Charging-Home-Charging.png"
-                model="Home Charging"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Shop"
-                OrderLink="https://www.google.com/"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Charging-Supercharging-NA.png"
-                model="Supercharging"
-                learnText="Learn"
-                learnLink="https://www.google.com/"
-                OrderText="Find"
-                OrderLink="https://www.google.com/"
-              />
-
-              <ListAnchor
-                text="Help Me Charge"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor
-                text="Charging Calculator"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor
-                text="Charging Whit NACS"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor
-                text="Supercharger Voting"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor
-                text="Host a Supercharger"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor
-                text="Commercial Charging"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-              <ListAnchor
-                text="Host Wall Connectors"
-                hover="true"
-                slot="ListHoverMenu"
-              />
-            </ContentHoverMenu>
-          </ListAnchor>
-
-          <ListAnchor text="Discover">
-            <ContentHoverMenu smallGrid="true">
-              <ContentMenuList title="Resources">
-                <ListAnchor text="Demo Drive" />
-                <ListAnchor text="Insurance" />
-                <ListAnchor text="Military Purchase Program" />
-                <ListAnchor text="Video Guides" />
-                <ListAnchor text="Customer stories" />
-                <ListAnchor text="Events" />
-              </ContentMenuList>
-              <ContentMenuList title="Location Services">
-                <ListAnchor text="Find Us" />
-                <ListAnchor text="Find a Collision Center" />
-                <ListAnchor text="Find a Certified Installer" />
-              </ContentMenuList>
-              <ContentMenuList title="Company">
-                <ListAnchor text="About" />
-                <ListAnchor text="Carrers" />
-                <ListAnchor text="Investor Relations" />
-              </ContentMenuList>
-            </ContentHoverMenu>
-          </ListAnchor>
-
-          <ListAnchor text="Shop">
-            <ContentHoverMenu centerGrid="true">
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Charging.png"
-                model="Charging"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Vehicle-Accessories.png"
-                model="Vehicle Accessories"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Apparel.png"
-                model="Apparel"
-              />
-              <ContentMenuProduct
-                urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Lifestyle.png"
-                model="Lifestyle"
-              />
-            </ContentHoverMenu>
-          </ListAnchor>
-        </ul>
-      </nav>
-
-      <nav class="w-[33.33%] flex justify-end">
-        <ul class="flex gap-1 flex-grow-2 pr-8 [&>li]:py-1">
-          <ListAnchor>
-            <SupportIcon />
-          </ListAnchor>
-          <ListAnchor>
-            <WorldIcon />
-          </ListAnchor>
-          <ListAnchor>
-            <AccountIcon />
-          </ListAnchor>
-        </ul>
-      </nav>
+  <div
+    class="relative w-full z-40 flex [&>nav]:h-14 [&>nav]:items-center [&>nav]:flex justify-between"
+  >
+    <h1 class="flex flex-grow-0 small:pl-8 pl-2 w-[33.33%] items-center h-14">
+      <Teslalogo />
+      <span class="hidden">Tesla</span>
+    </h1>
+    <div class="flex justify-end items-center pr-2 xl:hidden">
+      <ButtonMenuResponsive text="Menu" />
     </div>
+    <nav class="w-[33.33%] group justify-center !hidden xl:!flex">
+      <ul
+        class="font-display-bold [&>li]:inline-block [&>li]:text-sm [&>li]:px-4 [&>li]:py-1 [&>li]:tracking-[0.5px]"
+      >
+        <ListAnchor text="Vehicles">
+          <ContentHoverMenu largeGrid="true">
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-S.png"
+              model="Model S"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
 
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-3-Performance-LHD.png"
+              model="Model 3"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-X.png"
+              model="Model X"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Model-Y.png"
+              model="Model Y"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-Cybertruck-1x.png"
+              model="Cybertruck"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Vehicles-HMC-RedBlue-LHD.png"
+              model="Help Me Choose"
+              learnText="Get Started"
+              learnLink="https://www.google.com/"
+            />
+
+            <ListAnchor text="Inventory" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Used Cars" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Demo Drive" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Trade-in" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Compare" hover="true" slot="ListHoverMenu" />
+            <ListAnchor
+              text="Help Me Charge"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor text="Fleet" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Semi" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Roadster" hover="true" slot="ListHoverMenu" />
+          </ContentHoverMenu>
+        </ListAnchor>
+
+        <ListAnchor text="Energy">
+          <ContentHoverMenu largeGrid="true">
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Panels.png"
+              model="Solar Panel"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Solar-Roof.png"
+              model="Solar Roof"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Powerwall-US.png"
+              model="Powerwall"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Energy-Megapack.png"
+              model="Megapack"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+            />
+
+            <ListAnchor
+              text="Schedule a Consultation"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor text="Why Solar" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Incentives" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Suport" hover="true" slot="ListHoverMenu" />
+            <ListAnchor
+              text="Partner whit Tesla"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor text="Commercial" hover="true" slot="ListHoverMenu" />
+            <ListAnchor text="Utilities" hover="true" slot="ListHoverMenu" />
+          </ContentHoverMenu>
+        </ListAnchor>
+
+        <ListAnchor text="Charging">
+          <ContentHoverMenu mediumGrid="true">
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Charging-Charging.png"
+              model="Solar Panel"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Order"
+              OrderLink="https://www.google.com/"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Charging-Home-Charging.png"
+              model="Home Charging"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Shop"
+              OrderLink="https://www.google.com/"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Charging-Supercharging-NA.png"
+              model="Supercharging"
+              learnText="Learn"
+              learnLink="https://www.google.com/"
+              OrderText="Find"
+              OrderLink="https://www.google.com/"
+            />
+
+            <ListAnchor
+              text="Help Me Charge"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor
+              text="Charging Calculator"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor
+              text="Charging Whit NACS"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor
+              text="Supercharger Voting"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor
+              text="Host a Supercharger"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor
+              text="Commercial Charging"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+            <ListAnchor
+              text="Host Wall Connectors"
+              hover="true"
+              slot="ListHoverMenu"
+            />
+          </ContentHoverMenu>
+        </ListAnchor>
+
+        <ListAnchor text="Discover">
+          <ContentHoverMenu smallGrid="true">
+            <ContentMenuList title="Resources">
+              <ListAnchor text="Demo Drive" />
+              <ListAnchor text="Insurance" />
+              <ListAnchor text="Military Purchase Program" />
+              <ListAnchor text="Video Guides" />
+              <ListAnchor text="Customer stories" />
+              <ListAnchor text="Events" />
+            </ContentMenuList>
+            <ContentMenuList title="Location Services">
+              <ListAnchor text="Find Us" />
+              <ListAnchor text="Find a Collision Center" />
+              <ListAnchor text="Find a Certified Installer" />
+            </ContentMenuList>
+            <ContentMenuList title="Company">
+              <ListAnchor text="About" />
+              <ListAnchor text="Carrers" />
+              <ListAnchor text="Investor Relations" />
+            </ContentMenuList>
+          </ContentHoverMenu>
+        </ListAnchor>
+
+        <ListAnchor text="Shop">
+          <ContentHoverMenu centerGrid="true">
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Charging.png"
+              model="Charging"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Vehicle-Accessories.png"
+              model="Vehicle Accessories"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Apparel.png"
+              model="Apparel"
+            />
+            <ContentMenuProduct
+              urlImage="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Mega-Menu-Shop-Lifestyle.png"
+              model="Lifestyle"
+            />
+          </ContentHoverMenu>
+        </ListAnchor>
+      </ul>
+    </nav>
+
+    <nav class="w-[33.33%] justify-end !hidden xl:!flex">
+      <ul class="flex gap-1 flex-grow-2 pr-8 [&>li]:py-1">
+        <ListAnchor>
+          <SupportIcon />
+        </ListAnchor>
+        <ListAnchor>
+          <WorldIcon />
+        </ListAnchor>
+        <ListAnchor>
+          <AccountIcon />
+        </ListAnchor>
+      </ul>
+    </nav>
+  </div>
 </header>
