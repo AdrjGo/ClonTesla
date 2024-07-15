@@ -1,25 +1,26 @@
 ---
 interface Props {
   url: string;
+  urlResponsive: string;
   model: string;
   class?: string;
 }
-const { url, model } = Astro.props;
+const { url, urlResponsive, model } = Astro.props;
 const { class: additionalClasses = "" } = Astro.props;
 ---
 
 <section
-  class="flex bg-white h-screen w-full text-center relative overflow-hidden"
+  class="flex bg-white h-screen w-full text-center relative overflow-hidden "
 >
   <div class=`z-10 flex flex-col h-full w-full ${additionalClasses}`>
     <header
-      class="flex flex-col flex-grow justify-start pt-[7%] leading-none tracking-tight items-center"
+      class="flex flex-col flex-grow justify-start small:pt-[7%] pt-[151px] leading-none tracking-tight items-center px-6"
     >
       <slot />
     </header>
-    <footer class="flex flex-col flex-grow justify-end pb-[110px]">
-      <div class="flex flex-wrap justify-center">
-        <section class="flex flex-row grid-rows-1 justify-center gap-6">
+    <footer class="flex flex-col flex-grow justify-end  pb-[110px]">
+      <div class="flex px-6 small:justify-center w-full">
+        <section class="flex flex-row grid-rows-1 justify-center gap-6 flex-wrap w-full">
           <slot name="link-button" />
         </section>
       </div>
@@ -29,7 +30,8 @@ const { class: additionalClasses = "" } = Astro.props;
     <img
       src={url}
       alt={model}
-      class="h-full w-full object-cover object-center"
+      class="h-full w-full object-cover object-center hidden small:block"
     />
+    <img src={urlResponsive} alt={model} class="h-full w-full object-cover object-center" />
   </div>
 </section>

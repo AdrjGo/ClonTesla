@@ -34,7 +34,7 @@ export default {
         "auto-repeat": "repeat(12, 1fr)",
       },
       screens: {
-        small: "640px",
+        small: "600px",
         // => @media (min-width: 640px) { ... }
 
         medium: "1200px",

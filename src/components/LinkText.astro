@@ -22,9 +22,9 @@ const { class: additionalClasses = "" } = Astro.props;
 <a
   href={urlHeader}
   class:list={[
-    `font-text-medium leading-relaxed text-2xl ${additionalClasses}`,
+    `font-text-medium leading-relaxed small:text-2xl text-xl ${additionalClasses}`,
     {
-      "underline underline-offset-8 decoration-1": underline,
+      "small:underline underline-offset-8 decoration-1": underline,
       "hover:text-black duration-500": hover,
       "text-white": ligthColor,
       "text-light-grey": !ligthColor,
